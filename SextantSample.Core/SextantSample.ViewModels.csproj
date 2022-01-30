@@ -1,0 +1,8 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+    </PropertyGroup>
+    <ItemGroup>
+      <PackageReference Include="Sextant" Version="2.12.4" />
+    </ItemGroup>
+</Project>
