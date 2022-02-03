@@ -168,6 +168,8 @@ public partial class App : Application
 _navigationService.SetAdapter(new FrameNavigationViewAdapter(MyFrame, MyWindow));
 ```
 
+See [SextantSample.WinUI.FrameOnly](https://github.com/Gitii/Community.Sextant.WinUI/tree/main/SextantSample.WinUI.FrameOnly) for a simple example.
+
 #### A Frame and NavigationView
 
 ```csharp
@@ -177,6 +179,8 @@ _navigationService.SetAdapter(
     new NavigationViewAdapter(MyFrame, MyWindow, MyNavigationView)
 );
 ```
+
+See [SextantSample.WinUI.FrameWithNavigationView](https://github.com/Gitii/Community.Sextant.WinUI/tree/main/SextantSample.WinUI.FrameWithNavigationView) for an example.
 
 #### Integrate any control
 
@@ -193,7 +197,7 @@ Locator.CurrentMutable
     .RegisterViewWinUI(
         () => new MyView(),
         () => new MyViewModel()
-    )
+    );
 ```
 
 ### Using Microsoft DI:
