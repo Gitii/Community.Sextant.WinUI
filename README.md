@@ -22,9 +22,6 @@ Depending on which[Dependency Injection](https://de.wikipedia.org/wiki/Dependenc
   
   ```shell
   dotnet add Community.Sextant.WinUI.Microsoft.Extensions.DependencyInjection
-  
-  awdawd
-  adawda
   ```
   
   > NOTE: `Sextant` and `reactiveui` both always use `Splat` but `Splat` can use  `Microsoft.Extensions.DependencyInjection` as internal dependency resolver. Please see the [Advanced Integration Tutorial of Splat](https://github.com/reactiveui/splat/blob/main/src/Splat.Microsoft.Extensions.DependencyInjection/README.md) for more details.
