@@ -2,7 +2,6 @@
 using System.Reactive;
 using System.Reactive.Linq;
 using Microsoft.UI.Xaml;
-using Microsoft.UI.Xaml.Navigation;
 
 namespace Community.Sextant.WinUI.Adapters;
 

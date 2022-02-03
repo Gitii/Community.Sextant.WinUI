@@ -4,14 +4,11 @@ using System.Reactive.Concurrency;
 using System.Reactive.Linq;
 using System.Reactive.Subjects;
 using System.Threading.Tasks;
-using Windows.ApplicationModel.Activation;
-using ABI.Windows.Foundation;
 using Community.Sextant.WinUI.Adapters;
 using FakeItEasy;
 using FluentAssertions;
 using Microsoft.UI.Xaml.Navigation;
 using NUnit.Framework;
-using NUnit.Framework.Internal;
 using ReactiveUI;
 using Sextant;
 using Splat;
@@ -69,7 +66,11 @@ public class NavigationServiceTests
         );
 
         navigatedSubject.OnNext(
-            new MockNavigationEventArgs() { NavigationMode = NavigationMode.Back, Content = viewFor }
+            new MockNavigationEventArgs()
+            {
+                NavigationMode = NavigationMode.Back,
+                Content = viewFor
+            }
         );
 
         callbackVisited.Should().Be(1, "Observable should have fired and called the observer.");
@@ -354,7 +355,8 @@ public class NavigationServiceTests
 
     private static readonly object[] TestCases_PopModal_ShouldOnlyPop = new[]
     {
-        new object?[] { new IViewModel?[] { null } }, new object?[] { new IViewModel?[] { null, null } }
+        new object?[] { new IViewModel?[] { null } },
+        new object?[] { new IViewModel?[] { null, null } }
     };
 
     [TestCaseSource(nameof(TestCases_PopModal_ShouldOnlyPop))]

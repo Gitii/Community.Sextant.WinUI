@@ -19,7 +19,9 @@ public partial class SecondModalView
         Interactions.ErrorMessage.RegisterHandler(
             async x =>
             {
-                await Alerts.DisplayAlertAsync(_window, "Error", x.Input.Message, "Done").ConfigureAwait(false);
+                await Alerts
+                    .DisplayAlertAsync(_window, "Error", x.Input.Message, "Done")
+                    .ConfigureAwait(false);
                 x.SetOutput(true);
             }
         );

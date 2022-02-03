@@ -37,16 +37,20 @@ class SextantBuilder : ISextantBuilder
 
         _collection.TryAddSingleton<IViewTypeLocator>(_viewTypeLocator);
 
-        _collection.TryAddSingleton<IView>(
+        _collection.TryAddSingleton<INavigationService>(
             (services) =>
-            (
-                new NavigationService(
-                    RxApp.MainThreadScheduler,
-                    RxApp.TaskpoolScheduler,
-                    services.GetRequiredService<IViewTypeLocator>(),
-                    services.GetRequiredService<IDialogManager>()
+                (
+                    new NavigationService(
+                        RxApp.MainThreadScheduler,
+                        RxApp.TaskpoolScheduler,
+                        services.GetRequiredService<IViewTypeLocator>(),
+                        services.GetRequiredService<IDialogManager>()
+                    )
                 )
-            )
+        );
+
+        _collection.TryAddSingleton<IView>(
+            (services) => services.GetRequiredService<INavigationService>()
         );
 
         _collection.TryAddSingleton<ParameterViewStackService, ParameterViewStackService>();

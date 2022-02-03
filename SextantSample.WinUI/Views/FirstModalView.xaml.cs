@@ -1,5 +1,4 @@
-﻿using Community.Sextant.WinUI.Adapters;
-using Microsoft.UI.Xaml;
+﻿using Microsoft.UI.Xaml;
 using ReactiveUI;
 using SextantSample.ViewModels;
 using Splat;

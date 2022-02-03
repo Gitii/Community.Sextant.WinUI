@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "SextantSample.WinUI.FrameOnly (Package)": {
+      "commandName": "MsixPackage",
+      "nativeDebugging": true
+    },
+    "SextantSample.WinUI.FrameOnly (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

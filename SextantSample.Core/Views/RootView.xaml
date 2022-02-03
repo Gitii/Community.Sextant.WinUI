@@ -1,0 +1,23 @@
+<UserControl
+    x:Class="SextantSample.WinUI.Views.RootView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SextantSample.WinUI.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModels="using:SextantSample.WinUI.ViewModels"
+    mc:Ignorable="d"
+>
+    <NavigationView x:Name="NavigationView">
+        <NavigationView.MenuItemTemplate>
+            <DataTemplate x:DataType="viewModels:CounterRoute">
+                <NavigationViewItem Tag="{Binding Counter}">
+                    <NavigationViewItem.Content>
+                        <TextBlock TextAlignment="Center" Text="{Binding Label}" />
+                    </NavigationViewItem.Content>
+                </NavigationViewItem>
+            </DataTemplate>
+        </NavigationView.MenuItemTemplate>
+        <Frame x:Name="Content" />
+    </NavigationView>
+</UserControl>

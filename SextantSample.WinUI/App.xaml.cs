@@ -1,6 +1,4 @@
-﻿using System;
-using System.Reactive.Subjects;
-using System.Reflection;
+﻿using System.Reflection;
 using Community.Sextant.WinUI;
 using Community.Sextant.WinUI.Splat;
 using Microsoft.UI.Xaml;

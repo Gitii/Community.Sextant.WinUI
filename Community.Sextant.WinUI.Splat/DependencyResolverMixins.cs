@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Reactive.Concurrency;
-using Microsoft.UI.Xaml.Controls;
 using ReactiveUI;
 using Sextant;
 using Splat;
@@ -38,9 +37,21 @@ public static class DependencyResolverMixins
                     Locator.Current.GetService<IViewTypeLocator>()!,
                     Locator.Current.GetService<IDialogManager>()!
                 ),
+            typeof(INavigationService),
+            NavigationView
+        );
+
+        dependencyResolver.RegisterLazySingleton(
+            () => Locator.Current.GetService<INavigationService>(NavigationView)!,
+            typeof(INavigationService)
+        );
+
+        dependencyResolver.RegisterLazySingleton(
+            () => Locator.Current.GetService<INavigationService>(NavigationView)!,
             typeof(IView),
             NavigationView
         );
+
         return dependencyResolver;
     }
 
@@ -92,6 +103,48 @@ public static class DependencyResolverMixins
         this IMutableDependencyResolver dependencyResolver,
         string? contract = null
     )
+        where TView : IViewFor<TViewModel>, new()
+        where TViewModel : class, IViewModel, new()
+    {
+        if (dependencyResolver is null)
+        {
+            throw new ArgumentNullException(nameof(dependencyResolver));
+        }
+
+        var uwpViewTypeResolver = Locator.Current.GetService<ViewTypeLocator>();
+        if (uwpViewTypeResolver is null)
+        {
+            throw new InvalidOperationException("WinUI view type resolver not registered.");
+        }
+
+        uwpViewTypeResolver.Register<TView, TViewModel>();
+        dependencyResolver
+            .RegisterAnd<TView>()
+            .RegisterAnd<TViewModel>()
+            .Register(
+                () => Locator.Current.GetService<TView>()!,
+                typeof(IViewFor<TViewModel>),
+                contract
+            );
+        return dependencyResolver;
+    }
+
+    /// </summary>
+    /// <typeparam name="TView">The view type.</typeparam>
+    /// <typeparam name="TViewModel">The viewmodel type.</typeparam>
+    /// <param name="dependencyResolver">The dependency resolver.</param>
+    /// <param name="contract">The contract.</param>
+    /// <param name="viewFactory">The factory that can activate a <typeparamref name="TView"/>.</param>
+    /// <param name="viewModelFactory">The factory that can activate a <typeparamref name="TViewModel"/>.</param>
+    /// <returns>
+    /// The dependencyResolver.
+    /// </returns>
+    public static IMutableDependencyResolver RegisterViewWinUI<TView, TViewModel>(
+        this IMutableDependencyResolver dependencyResolver,
+        Func<TView> viewFactory,
+        Func<TViewModel> viewModelFactory,
+        string? contract = null
+    )
         where TView : IViewFor<TViewModel>
         where TViewModel : class, IViewModel
     {
@@ -107,11 +160,14 @@ public static class DependencyResolverMixins
         }
 
         uwpViewTypeResolver.Register<TView, TViewModel>();
-        dependencyResolver.Register(
-            () => Locator.Current.GetService<TView>()!,
-            typeof(IViewFor<TViewModel>),
-            contract
-        );
+        dependencyResolver
+            .RegisterAnd(viewFactory)
+            .RegisterAnd(viewModelFactory)
+            .Register(
+                () => Locator.Current.GetService<TView>()!,
+                typeof(IViewFor<TViewModel>),
+                contract
+            );
         return dependencyResolver;
     }
 
@@ -129,8 +185,9 @@ public static class DependencyResolverMixins
             throw new ArgumentNullException(nameof(dependencyResolver));
         }
 
-        dependencyResolver.RegisterLazySingleton<IViewStackService>(() =>
-            Locator.Current.GetService<IParameterViewStackService>());
+        dependencyResolver.RegisterLazySingleton<IViewStackService>(
+            () => Locator.Current.GetService<IParameterViewStackService>()
+        );
 
         return dependencyResolver;
     }

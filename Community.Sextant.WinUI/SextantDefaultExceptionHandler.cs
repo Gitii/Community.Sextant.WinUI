@@ -3,7 +3,7 @@ using System.Diagnostics;
 using System.Reactive.Concurrency;
 using ReactiveUI;
 
-namespace SextantSample.ViewModels;
+namespace Community.Sextant.WinUI;
 
 public class SextantDefaultExceptionHandler : IObserver<Exception>
 {

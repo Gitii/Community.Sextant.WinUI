@@ -20,6 +20,8 @@ class NavigationViewBuilder : INavigationViewBuilder
         where TViewModel : class, IViewModel
     {
         _collection.AddTransient<IViewFor<TViewModel>, TView>();
+        _collection.AddTransient<TViewModel>();
+        _collection.AddTransient<TView>();
         _typeLocator.Register<TView, TViewModel>();
 
         return this;
