@@ -39,6 +39,7 @@ public partial class App : Application
             .RegisterParameterViewStackService()
             .RegisterViewStackServiceFromParameterService()
             .RegisterNavigationView()
+            .RegisterConstantAnd<IDialogManager>(new DialogManager())
             .RegisterViewWinUI(
                 () => new CounterView(),
                 () =>
@@ -52,7 +53,6 @@ public partial class App : Application
                         Locator.Current.GetService<INavigationService>()!
                     )
             )
-            .RegisterConstantAnd<IDialogManager>(new DialogManager())
             .RegisterLazySingletonAnd(
                 () =>
                     new MainWindow(
