@@ -28,7 +28,7 @@ jobs:
         with:
           msbuild-architecture: x64
       - name: Build
-        run: msbuild /t:build /p:Configuration=Release /p:Version="$env:TAG_NAME" Community.Sextant.WinUI.sln
+        run: msbuild /t:build -restore /p:Configuration=Release /p:Version="$env:TAG_NAME" Community.Sextant.WinUI.sln
         env:
           TAG_NAME: ${{ steps.tagName.outputs.tag }}
       - name: Test

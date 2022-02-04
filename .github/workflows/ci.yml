@@ -23,6 +23,6 @@ jobs:
         with:
           msbuild-architecture: x64
       - name: Build
-        run: msbuild /t:build /p:Configuration=Release Community.Sextant.WinUI.sln
+        run: msbuild /t:build -restore /p:Configuration=Release Community.Sextant.WinUI.sln
       - name: Test
         run: Get-ChildItem -Recurse -Filter "*.Tests.dll" | ? { $_.FullName -Match "bin[\\/]Release" -and $_.FullName -notmatch "ref" } | % { vstest.console.exe $_.FullName }
