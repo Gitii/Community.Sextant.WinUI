@@ -25,7 +25,6 @@
     <ItemGroup>
         <PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.0" />
         <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.0.0" />
-        <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.22000.197" />
         <PackageReference Include="ReactiveUI.WinUI" Version="17.1.17" />
         <PackageReference Include="Splat.Microsoft.Extensions.DependencyInjection" Version="14.1.17" />
         <Manifest Include="$(ApplicationManifest)" />

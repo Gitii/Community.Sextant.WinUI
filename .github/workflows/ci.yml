@@ -19,6 +19,6 @@ jobs:
             5.0.x
             6.0.x
       - name: Build
-        run: dotnet build --configuration Release ./Community.Sextant.WinUI.sln
+        run: msbuild /t:build /p:Configuration=Release Community.Sextant.WinUI.sln
       - name: Test
-        run: dotnet test --configuration Release --no-build ./Community.Sextant.WinUI.sln
+        run: Get-ChildItem -Recurse -Filter "*.Tests.dll" | ? { $_.FullName -Match "bin[\\/]Release" -and $_.FullName -notmatch "ref" } | % { vstest.console.exe $_.FullName }
