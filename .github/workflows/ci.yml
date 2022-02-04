@@ -22,7 +22,8 @@ jobs:
         uses: microsoft/setup-msbuild@v1.1
         with:
           msbuild-architecture: x64
-          vs-version: '17.1'
+          vs-version: 17
+          vs-prerelease: true
       - name: Build
         run: msbuild /t:build -restore /p:Configuration=Release -m:4 Community.Sextant.WinUI.sln
       - name: Test
