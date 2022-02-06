@@ -38,7 +38,7 @@ jobs:
       - name: Test
         run: Get-ChildItem -Recurse -Filter "*.Tests.dll" | ? { $_.FullName -Match "bin[\\/]Release" -and $_.FullName -notmatch "ref" } | % { vstest.console.exe $_.FullName }
       - name: Pack
-        run: msbuild /t:pack /p:Configuration=Release /p:OutputPath="$(Join-Path $(Get-Location) nuget)" /p:Version="$env:TAG_NAME" -m:4 ./Community.Sextant.WinUI.sln
+        run: msbuild /t:pack /p:Configuration=Release /p:OutputPath="$(Join-Path $(Get-Location) nuget)" /p:Version="$env:TAG_NAME" -m:1 ./Community.Sextant.WinUI.sln
         env:
           TAG_NAME: ${{ steps.tagName.outputs.tag }}
       - name: Attach nuget packages to Github releases
