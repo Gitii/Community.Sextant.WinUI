@@ -5,7 +5,7 @@ on:
 
 jobs:
   publish:
-    runs-on: windows-latest
+    runs-on: windows-2022
     steps:
       - uses: olegtarasov/get-tag@v2.1
         id: tagName
@@ -20,18 +20,25 @@ jobs:
         uses: actions/setup-dotnet@v1
         with:
           dotnet-version: |
-            3.1.x
             5.0.x
             6.0.x
           include-prerelease: true
+      - name: Add msbuild to PATH
+        uses: microsoft/setup-msbuild@v1.1
+        with:
+          msbuild-architecture: x64
+          vs-version: 17
+          vs-prerelease: true
+      - name: Setup VSTest Path
+        uses: darenm/Setup-VSTest@v1
       - name: Build
-        run: dotnet build -p:Configuration=Release -p:Version="$env:TAG_NAME"
+        run: msbuild /t:build -restore /p:Configuration=Release /p:Version="$env:TAG_NAME" -m:4 Community.Sextant.WinUI.sln
         env:
           TAG_NAME: ${{ steps.tagName.outputs.tag }}
       - name: Test
-        run: dotnet test -p:Configuration=Release --no-build
+        run: Get-ChildItem -Recurse -Filter "*.Tests.dll" | ? { $_.FullName -Match "bin[\\/]Release" -and $_.FullName -notmatch "ref" } | % { vstest.console.exe $_.FullName }
       - name: Pack
-        run: dotnet pack -p:Configuration=Release -o "$(Join-Path $(Get-Location) nuget)" /p:Version="$env:TAG_NAME" --no-build
+        run: msbuild /t:pack /p:Configuration=Release /p:OutputPath="$(Join-Path $(Get-Location) nuget)" /p:Version="$env:TAG_NAME" -m:1 ./Community.Sextant.WinUI.sln
         env:
           TAG_NAME: ${{ steps.tagName.outputs.tag }}
       - name: Attach nuget packages to Github releases
@@ -39,7 +46,7 @@ jobs:
         with:
           files: "./nuget/*.nupkg"
           body_path: "./RELEASE-NOTES.txt"
-      #- name: Push packages to Nuget registry
-      #  run: dotnet nuget push $(Get-ChildItem -Path ./nuget -Filter "*.nupkg").FullName --source "https://api.nuget.org/v3/index.json" --api-key "$env:NUGET_API_KEY" --skip-duplicate --no-symbols 1
-      #  env:
-      #    NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
+      - name: Push packages to Nuget registry
+        run: dotnet nuget push $(Get-ChildItem -Path ./nuget -Filter "*.nupkg").FullName --source "https://api.nuget.org/v3/index.json" --api-key "$env:NUGET_API_KEY" --skip-duplicate --no-symbols 1
+        env:
+          NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}

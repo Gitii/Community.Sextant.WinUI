@@ -7,7 +7,7 @@
         <SupportedOSPlatformVersion>10.0.19041.0</SupportedOSPlatformVersion>
     </PropertyGroup>
     <ItemGroup>
-      <None Remove="Views\RootView.xaml" />
+        <None Remove="Views\RootView.xaml" />
     </ItemGroup>
     <ItemGroup>
         <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.0.0" />
@@ -15,14 +15,14 @@
         <PackageReference Include="Sextant" Version="2.12.4" />
     </ItemGroup>
     <ItemGroup>
-      <ProjectReference Include="..\Community.Sextant.WinUI\Community.Sextant.WinUI.csproj" />
+        <ProjectReference Include="..\Community.Sextant.WinUI\Community.Sextant.WinUI.csproj" />
     </ItemGroup>
     <ItemGroup>
         <None Update="Views\CounterView.xaml">
             <Generator>MSBuild:Compile</Generator>
         </None>
         <Page Update="Views\RootView.xaml">
-          <Generator>MSBuild:Compile</Generator>
+            <Generator>MSBuild:Compile</Generator>
         </Page>
     </ItemGroup>
 </Project>

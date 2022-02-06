@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-2022
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -16,10 +16,17 @@ jobs:
         uses: actions/setup-dotnet@v1
         with:
           dotnet-version: |
-            3.1.x
             5.0.x
             6.0.x
+      - name: Add msbuild to PATH
+        uses: microsoft/setup-msbuild@v1.1
+        with:
+          msbuild-architecture: x64
+          vs-version: 17
+          vs-prerelease: true
+      - name: Setup VSTest Path
+        uses: darenm/Setup-VSTest@v1
       - name: Build
-        run: dotnet build --configuration Release
+        run: msbuild /t:build -restore /p:Configuration=Release -m:4 Community.Sextant.WinUI.sln
       - name: Test
-        run: dotnet test --configuration Release --no-build
+        run: Get-ChildItem -Recurse -Filter "*.Tests.dll" | ? { $_.FullName -Match "bin[\\/]Release" -and $_.FullName -notmatch "ref" } | % { vstest.console.exe $_.FullName }
