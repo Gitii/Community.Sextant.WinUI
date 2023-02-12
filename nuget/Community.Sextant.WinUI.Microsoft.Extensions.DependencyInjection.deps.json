@@ -1,0 +1,452 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Community.Sextant.WinUI.Microsoft.Extensions.DependencyInjection/1.2.3": {
+        "dependencies": {
+          "AsyncFixer": "1.5.1",
+          "Community.Sextant.WinUI": "1.0.0",
+          "Meziantou.Analyzer": "1.0.688",
+          "Microsoft.CodeAnalysis.NetAnalyzers": "6.0.0",
+          "Microsoft.Extensions.DependencyInjection": "6.0.0",
+          "Microsoft.VisualStudio.Threading.Analyzers": "17.0.64",
+          "Microsoft.WindowsAppSDK": "1.0.0",
+          "Sextant": "2.12.4",
+          "runtimepack.Microsoft.Windows.SDK.NET.Ref": "10.0.19041.22"
+        },
+        "runtime": {
+          "Community.Sextant.WinUI.Microsoft.Extensions.DependencyInjection.dll": {}
+        }
+      },
+      "runtimepack.Microsoft.Windows.SDK.NET.Ref/10.0.19041.22": {
+        "runtime": {
+          "Microsoft.Windows.SDK.NET.dll": {
+            "assemblyVersion": "10.0.19041.22",
+            "fileVersion": "10.0.19041.22"
+          },
+          "WinRT.Runtime.dll": {
+            "assemblyVersion": "1.4.0.0",
+            "fileVersion": "1.4.0.37231"
+          }
+        }
+      },
+      "AsyncFixer/1.5.1": {},
+      "DynamicData/7.1.16": {
+        "dependencies": {
+          "System.Reactive": "5.0.0"
+        },
+        "runtime": {
+          "lib/net5.0/DynamicData.dll": {
+            "assemblyVersion": "7.1.0.0",
+            "fileVersion": "7.1.16.9158"
+          }
+        }
+      },
+      "Meziantou.Analyzer/1.0.688": {},
+      "Microsoft.CodeAnalysis.NetAnalyzers/6.0.0": {},
+      "Microsoft.Extensions.DependencyInjection/6.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.Extensions.DependencyInjection.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          }
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions/6.0.0": {
+        "runtime": {
+          "lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          }
+        }
+      },
+      "Microsoft.NETCore.Platforms/1.1.0": {},
+      "Microsoft.NETCore.Targets/1.1.0": {},
+      "Microsoft.VisualStudio.Threading.Analyzers/17.0.64": {},
+      "Microsoft.Windows.SDK.BuildTools/10.0.22000.194": {},
+      "Microsoft.WindowsAppSDK/1.0.0": {
+        "dependencies": {
+          "Microsoft.Windows.SDK.BuildTools": "10.0.22000.194"
+        },
+        "runtime": {
+          "lib/net5.0-windows10.0.18362.0/Microsoft.InteractiveExperiences.Projection.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.22467.1012"
+          },
+          "lib/net5.0-windows10.0.18362.0/Microsoft.WinUI.dll": {
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "3.0.0.2111"
+          },
+          "lib/net5.0-windows10.0.18362.0/Microsoft.Windows.AppLifecycle.Projection.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          },
+          "lib/net5.0-windows10.0.18362.0/Microsoft.Windows.ApplicationModel.DynamicDependency.Projection.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          },
+          "lib/net5.0-windows10.0.18362.0/Microsoft.Windows.ApplicationModel.Resources.Projection.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          },
+          "lib/net5.0-windows10.0.18362.0/Microsoft.Windows.ApplicationModel.WindowsAppRuntime.Projection.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          },
+          "lib/net5.0-windows10.0.18362.0/Microsoft.Windows.System.Power.Projection.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          },
+          "lib/net5.0-windows10.0.18362.0/Microsoft.WindowsAppRuntime.Bootstrap.Net.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win10-arm64/native/Microsoft.WindowsAppRuntime.Bootstrap.dll": {
+            "rid": "win10-arm64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win10-x64/native/Microsoft.WindowsAppRuntime.Bootstrap.dll": {
+            "rid": "win10-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win10-x86/native/Microsoft.WindowsAppRuntime.Bootstrap.dll": {
+            "rid": "win10-x86",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "ReactiveUI/13.3.2": {
+        "dependencies": {
+          "DynamicData": "7.1.16",
+          "Splat": "11.1.1",
+          "System.Reactive": "5.0.0",
+          "System.Runtime.Serialization.Primitives": "4.3.0"
+        },
+        "runtime": {
+          "lib/net5.0-windows10.0.19041/ReactiveUI.dll": {
+            "assemblyVersion": "13.3.0.0",
+            "fileVersion": "13.3.2.62526"
+          }
+        }
+      },
+      "Sextant/2.12.4": {
+        "dependencies": {
+          "ReactiveUI": "13.3.2",
+          "System.Collections.Immutable": "5.0.0"
+        },
+        "runtime": {
+          "lib/net5.0/Sextant.dll": {
+            "assemblyVersion": "2.12.0.0",
+            "fileVersion": "2.12.4.42631"
+          }
+        }
+      },
+      "Splat/11.1.1": {
+        "runtime": {
+          "lib/net5.0/Splat.dll": {
+            "assemblyVersion": "11.1.0.0",
+            "fileVersion": "11.1.1.30354"
+          }
+        }
+      },
+      "System.Collections.Immutable/5.0.0": {},
+      "System.Globalization/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "System.Runtime": "4.3.0"
+        }
+      },
+      "System.IO/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "System.Runtime": "4.3.0",
+          "System.Text.Encoding": "4.3.0",
+          "System.Threading.Tasks": "4.3.0"
+        }
+      },
+      "System.Reactive/5.0.0": {
+        "runtime": {
+          "lib/net5.0-windows10.0.19041/System.Reactive.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.0.1"
+          }
+        }
+      },
+      "System.Reflection/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "System.IO": "4.3.0",
+          "System.Reflection.Primitives": "4.3.0",
+          "System.Runtime": "4.3.0"
+        }
+      },
+      "System.Reflection.Primitives/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "System.Runtime": "4.3.0"
+        }
+      },
+      "System.Resources.ResourceManager/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "System.Globalization": "4.3.0",
+          "System.Reflection": "4.3.0",
+          "System.Runtime": "4.3.0"
+        }
+      },
+      "System.Runtime/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0"
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/6.0.0": {},
+      "System.Runtime.Serialization.Primitives/4.3.0": {
+        "dependencies": {
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0"
+        }
+      },
+      "System.Text.Encoding/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "System.Runtime": "4.3.0"
+        }
+      },
+      "System.Threading.Tasks/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "System.Runtime": "4.3.0"
+        }
+      },
+      "Community.Sextant.WinUI/1.0.0": {
+        "dependencies": {
+          "Microsoft.WindowsAppSDK": "1.0.0",
+          "Sextant": "2.12.4"
+        },
+        "runtime": {
+          "Community.Sextant.WinUI.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Community.Sextant.WinUI.Microsoft.Extensions.DependencyInjection/1.2.3": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "runtimepack.Microsoft.Windows.SDK.NET.Ref/10.0.19041.22": {
+      "type": "runtimepack",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AsyncFixer/1.5.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-q3S4Cfk3V7tA17tlldemqPXQUW7WZ/PT/4HhHeSXZUcF11w1sc9zFjGGSZk5fQX0HiivUFj2MQ0OM2Y8tQeWFw==",
+      "path": "asyncfixer/1.5.1",
+      "hashPath": "asyncfixer.1.5.1.nupkg.sha512"
+    },
+    "DynamicData/7.1.16": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-CMXT1lXzKSW3siHty4sNZO5XUHPWMH51aksCwFIW1u3e3Js0zkMSw9DqgNC3eLoIiOKwUO5gPK0YSg96nHl1bQ==",
+      "path": "dynamicdata/7.1.16",
+      "hashPath": "dynamicdata.7.1.16.nupkg.sha512"
+    },
+    "Meziantou.Analyzer/1.0.688": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-m46sK5pmNFG4dKAB9+cppowQbZLHZdwAxy2laL0PPUuUXfkBcu0y76PVwBz5gD6a+ETa0KwGubHd1KoVr6i4zg==",
+      "path": "meziantou.analyzer/1.0.688",
+      "hashPath": "meziantou.analyzer.1.0.688.nupkg.sha512"
+    },
+    "Microsoft.CodeAnalysis.NetAnalyzers/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-cjG06LMeOADNUeCUaklOfVgrnVkLy80H5PVll4QHDUXv+C+6G9rHczrNdWjfb3xKv3Ts9s4UsP6J2ZWe52Gz4Q==",
+      "path": "microsoft.codeanalysis.netanalyzers/6.0.0",
+      "hashPath": "microsoft.codeanalysis.netanalyzers.6.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.DependencyInjection/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-k6PWQMuoBDGGHOQTtyois2u4AwyVcIwL2LaSLlTZQm2CYcJ1pxbt6jfAnpWmzENA/wfrYRI/X9DTLoUkE4AsLw==",
+      "path": "microsoft.extensions.dependencyinjection/6.0.0",
+      "hashPath": "microsoft.extensions.dependencyinjection.6.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.DependencyInjection.Abstractions/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xlzi2IYREJH3/m6+lUrQlujzX8wDitm4QGnUu6kUXTQAWPuZY8i+ticFJbzfqaetLA6KR/rO6Ew/HuYD+bxifg==",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/6.0.0",
+      "hashPath": "microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512"
+    },
+    "Microsoft.NETCore.Platforms/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
+      "path": "microsoft.netcore.platforms/1.1.0",
+      "hashPath": "microsoft.netcore.platforms.1.1.0.nupkg.sha512"
+    },
+    "Microsoft.NETCore.Targets/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-aOZA3BWfz9RXjpzt0sRJJMjAscAUm3Hoa4UWAfceV9UTYxgwZ1lZt5nO2myFf+/jetYQo4uTP7zS8sJY67BBxg==",
+      "path": "microsoft.netcore.targets/1.1.0",
+      "hashPath": "microsoft.netcore.targets.1.1.0.nupkg.sha512"
+    },
+    "Microsoft.VisualStudio.Threading.Analyzers/17.0.64": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+xz3lAqA3h2/5q6H7Udmz9TsxDQ99O+PjoQ4k4BTO3SfAfyJX7ejh7I1D1N/M/GzGUci9YOUpr6KBO4vXLg+zQ==",
+      "path": "microsoft.visualstudio.threading.analyzers/17.0.64",
+      "hashPath": "microsoft.visualstudio.threading.analyzers.17.0.64.nupkg.sha512"
+    },
+    "Microsoft.Windows.SDK.BuildTools/10.0.22000.194": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-4L0P3zqut466SIqT3VBeLTNUQTxCBDOrTRymRuROCRJKazcK7ibLz9yAO1nKWRt50ttCj39oAa2Iuz9ZTDmLlg==",
+      "path": "microsoft.windows.sdk.buildtools/10.0.22000.194",
+      "hashPath": "microsoft.windows.sdk.buildtools.10.0.22000.194.nupkg.sha512"
+    },
+    "Microsoft.WindowsAppSDK/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-nQRK4KuaRDWk9YX78k4Vn1D9w2Z07ki1mTmuT+4oCIEJNM01c40A7DUC6GiBdTjmHJbBq4hm7EyFQUb+kBSW8A==",
+      "path": "microsoft.windowsappsdk/1.0.0",
+      "hashPath": "microsoft.windowsappsdk.1.0.0.nupkg.sha512"
+    },
+    "ReactiveUI/13.3.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+XJGnk+u7ZuYuAaBVfs0X3nLZ6g4ysiZrVou7ndVJYOUFeUW0jyfaMl3TfOqpr/afQNaIw8nY6yOwtI6HGkgsQ==",
+      "path": "reactiveui/13.3.2",
+      "hashPath": "reactiveui.13.3.2.nupkg.sha512"
+    },
+    "Sextant/2.12.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pc46V0ZaB8r62m2a/uCOJZ9MZN8muyKMRAN+w7ML2UmmXYIU6SHTvtAPZv4/jBuFwnSA97yNoQOS56WTkSD2KQ==",
+      "path": "sextant/2.12.4",
+      "hashPath": "sextant.2.12.4.nupkg.sha512"
+    },
+    "Splat/11.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-qIgixm6tg+6Sztd5BM36Y+sRWdmzlCV2TYnViOSwqvOGAMaYYE9EhIaKHLbZHn6KXWAML8GMGx0kaosUMUA0rA==",
+      "path": "splat/11.1.1",
+      "hashPath": "splat.11.1.1.nupkg.sha512"
+    },
+    "System.Collections.Immutable/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-FXkLXiK0sVVewcso0imKQoOxjoPAj42R8HtjjbSjVPAzwDfzoyoznWxgA3c38LDbN9SJux1xXoXYAhz98j7r2g==",
+      "path": "system.collections.immutable/5.0.0",
+      "hashPath": "system.collections.immutable.5.0.0.nupkg.sha512"
+    },
+    "System.Globalization/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kYdVd2f2PAdFGblzFswE4hkNANJBKRmsfa2X5LG2AcWE1c7/4t0pYae1L8vfZ5xvE2nK/R9JprtToA61OSHWIg==",
+      "path": "system.globalization/4.3.0",
+      "hashPath": "system.globalization.4.3.0.nupkg.sha512"
+    },
+    "System.IO/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3qjaHvxQPDpSOYICjUoTsmoq5u6QJAFRUITgeT/4gqkF1bajbSmb1kwSxEA8AHlofqgcKJcM8udgieRNhaJ5Cg==",
+      "path": "system.io/4.3.0",
+      "hashPath": "system.io.4.3.0.nupkg.sha512"
+    },
+    "System.Reactive/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-erBZjkQHWL9jpasCE/0qKAryzVBJFxGHVBAvgRN1bzM0q2s1S4oYREEEL0Vb+1kA/6BKb5FjUZMp5VXmy+gzkQ==",
+      "path": "system.reactive/5.0.0",
+      "hashPath": "system.reactive.5.0.0.nupkg.sha512"
+    },
+    "System.Reflection/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-KMiAFoW7MfJGa9nDFNcfu+FpEdiHpWgTcS2HdMpDvt9saK3y/G4GwprPyzqjFH9NTaGPQeWNHU+iDlDILj96aQ==",
+      "path": "system.reflection/4.3.0",
+      "hashPath": "system.reflection.4.3.0.nupkg.sha512"
+    },
+    "System.Reflection.Primitives/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-5RXItQz5As4xN2/YUDxdpsEkMhvw3e6aNveFXUn4Hl/udNTCNhnKp8lT9fnc3MhvGKh1baak5CovpuQUXHAlIA==",
+      "path": "system.reflection.primitives/4.3.0",
+      "hashPath": "system.reflection.primitives.4.3.0.nupkg.sha512"
+    },
+    "System.Resources.ResourceManager/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/zrcPkkWdZmI4F92gL/TPumP98AVDu/Wxr3CSJGQQ+XN6wbRZcyfSKVoPo17ilb3iOr0cCRqJInGwNMolqhS8A==",
+      "path": "system.resources.resourcemanager/4.3.0",
+      "hashPath": "system.resources.resourcemanager.4.3.0.nupkg.sha512"
+    },
+    "System.Runtime/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-JufQi0vPQ0xGnAczR13AUFglDyVYt4Kqnz1AZaiKZ5+GICq0/1MH/mO/eAJHt/mHW1zjKBJd7kV26SrxddAhiw==",
+      "path": "system.runtime/4.3.0",
+      "hashPath": "system.runtime.4.3.0.nupkg.sha512"
+    },
+    "System.Runtime.CompilerServices.Unsafe/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/iUeP3tq1S0XdNNoMz5C9twLSrM/TH+qElHkXWaPvuNOt+99G75NrV0OS2EqHx5wMN7popYjpc8oTjC1y16DLg==",
+      "path": "system.runtime.compilerservices.unsafe/6.0.0",
+      "hashPath": "system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+    },
+    "System.Runtime.Serialization.Primitives/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Wz+0KOukJGAlXjtKr+5Xpuxf8+c8739RI1C+A2BoQZT+wMCCoMDDdO8/4IRHfaVINqL78GO8dW8G2lW/e45Mcw==",
+      "path": "system.runtime.serialization.primitives/4.3.0",
+      "hashPath": "system.runtime.serialization.primitives.4.3.0.nupkg.sha512"
+    },
+    "System.Text.Encoding/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-BiIg+KWaSDOITze6jGQynxg64naAPtqGHBwDrLaCtixsa5bKiR8dpPOHA7ge3C0JJQizJE+sfkz1wV+BAKAYZw==",
+      "path": "system.text.encoding/4.3.0",
+      "hashPath": "system.text.encoding.4.3.0.nupkg.sha512"
+    },
+    "System.Threading.Tasks/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-LbSxKEdOUhVe8BezB/9uOGGppt+nZf6e1VFyw6v3DN6lqitm0OSn2uXMOdtP0M3W4iMcqcivm2J6UgqiwwnXiA==",
+      "path": "system.threading.tasks/4.3.0",
+      "hashPath": "system.threading.tasks.4.3.0.nupkg.sha512"
+    },
+    "Community.Sextant.WinUI/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
