@@ -10,8 +10,8 @@
         <None Remove="Views\RootView.xaml" />
     </ItemGroup>
     <ItemGroup>
-        <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.0.0" />
-        <PackageReference Include="ReactiveUI.WinUI" Version="17.1.17" />
+        <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.2.230118.102" />
+        <PackageReference Include="ReactiveUI.WinUI" Version="18.4.20" />
         <PackageReference Include="Sextant" Version="2.12.4" />
     </ItemGroup>
     <ItemGroup>
